@@ -1,0 +1,34 @@
+[
+    {
+        "id": "album-aves",
+        "name": "Álbum Infantil de Aves en Colombia",
+        "short_description": "Álbum ilustrado infantil con láminas autoadhesivas, sobre aves en Colombia.  Para PROEXPORT COLOMBIA, con destino a las tiendas NATIONAL GEOGRAPHIC de Madrid y Londres.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag2.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Stickers.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    }
+]

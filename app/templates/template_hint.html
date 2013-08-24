@@ -1,0 +1,17 @@
+
+<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#<% parent %>" href="#<%= hints.id %>">
+            <h4><%= hints.for %></h4>
+        </a>
+    </div>
+    <div id="<%= hints.id %>" class="accordion-body collapse">
+        <div class="accordion-inner">
+            <ul>
+                <% _.each(hints.list, function(hint){ %>
+                <li> <%= hint %> </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</div>

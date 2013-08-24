@@ -1,0 +1,147 @@
+[
+    {
+        "team": "Ilustradores",
+        "members": [
+            {
+                "name": "César Landazábal Mendoza",
+                "bio": "Autor de más de 60 estampillas sobre fauna y flora de Colombia. Es considerado por muchos, uno de los mejores ilustradores de América.",
+                "img": "landazabal.jpg"
+            },
+            {
+                "name": "Benjamín Cárdenas",
+                "bio": "Ilustrador científico con 14 años de trayectoria. Docente de la U. Tadeo Bogotá. Ha dirigido y participado en numerosos proyectos digitales e impresos de botánica y fauna.",
+                "img": "benjamin.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Investigadores",
+        "members": [
+            {
+                "name": "Gary Stiles",
+                "bio": "Ornitólogo norteamericano con numerosas publicaciones, premios y reconocimientos a su labor. Es altamente reconocido a nivel mundial por su trayectoria. Los colibríes son las aves de su preferencia en la investigación.",
+                "img": "gary.jpg"
+            },
+            {
+                "name": "B.M., M.Sc., Ph.D. Arturo Acero",
+                "bio": "Biólogo Marino, PhD en Ecología y Biología Evolutiva. Su trabajo se centra en el estudio de la sistemática y la biogeografía de peces marinos neotropicales. Actualmente trabaja en INVEMAR y es docente de La U. Nacional Sede Caribe.",
+                "img": "arturo.jpg"
+            },
+            {
+                "name": "B.M. Juan Carlos Quijano",
+                "bio": "BSc. Biólogo Marino de la U. Tadeo Lozano, con énfasis en Macroinvertebrados Bénticos, crustáceos peracáridos y peces de agua dulce.",
+                "img": "juancarlos.jpg"
+            },
+            {
+                "name": "Camila Solano",
+                "bio": "Bióloga, U. del Valle. Investigadora en el área de mastozoología y ecología. Trabaja en temas relacionados con conservación, educación ambiental y consultorías ambientales. Practica yoga.",
+                "img": "camila.jpg"
+            },
+            {
+                "name": "Cristóbal Ríos Málaver",
+                "bio": "Biólogo. M.Sc en Ciencias y Ecología del Ins. Venezolano de Investigaciones Científicas. Sus intereses como investigador son la ecología, taxonomía y biogeografía de especies de mariposas y escarabajos, especialmente en regiones montañosas.",
+                "img": "cristo.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Gestor Cultural",
+        "members": [
+            {
+                "name": "M.Sc. Diego Escobar Álvarez",
+                "bio": "Administración y Organizaciones. Docente  de posgrados de la Universidad del Valle y Consultor en gestión, políticas públicas y desarrollo institucional. Fotógrafo.",
+                "img": "diego.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Diseñadores",
+        "members": [
+            {
+                "name": "Sergio Ospina",
+                "bio": "Diseñador Visual. Ilustrador, Diseñador Editorial, Fotógrafo. Poeta de la imagen fija, músico en sus ratos libres. Su hijo Gabriel sigue sus pasos como ilustrador.",
+                "img": "sergio.jpg"
+            },
+            {
+                "name": "María Fernanda Restrepo",
+                "bio": "Diseñadora Visual con énfasis en producción audiovisual y experiencia en producción interactiva y digital. Ama los animales,  especialmente los gatos.",
+                "img": "mafe.jpg"
+            },
+            {
+                "name": "Melissa Zuluaga",
+                "bio": "Diseñadora Visual con énfasis en diseño fijo. Actualmente tiene su empresa de diseño integral llamada Pincello – Comunicación visual.",
+                "img": "meli.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Fotografía",
+        "members": [
+            {
+                "name": "Juanita Escobar",
+                "bio": "Ganadora del Premio Nacional Colombo Suizo de fotografía 2009, ganadora de Crea Digital 2012 del Ministerio de Cultura. Actualmente reside en Hungría.",
+                "img": "juanita.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Comunity Manager",
+        "members": [
+            {
+                "name": "César Buriticá",
+                "bio": "Geólogo Field Engineer, investigador. Maneja nuestras redes sociales y ha creado importantes campañas en contra del tráfico de biodiversidad y el maltrato animal. Es amante de los animales.",
+                "img": "cesar.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Desarrollo web",
+        "members": [
+            {
+                "name": "Ing. Oscar David Arbeláez",
+                "bio": "Ingeniero físico de la Universidad Nacional de Colombia. Actualmente estudiante de maestría en física teórica, desarrolla software y aplicaciones web como hobbie.",
+                "img": "oscar.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Edición",
+        "members": [
+            {
+                "name": "Luisa Fernanda Ramírez",
+                "bio": "Profesional en Filosofía y letras y Especialista en Televisión. Nos apoya en la  creación, edición y adaptación de contenidos. Es docente de cine y amante de las plantas.",
+                "img": "luisa.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Asesor Jurídico",
+        "members": [
+            {
+                "name": "David Felipe Álvarez Amézquita",
+                "bio": "Magister en Historia, abogado experto en Propiedad Intelectual y Derecho de Autor. Investigador, docente y consultor con numerosas publicaciones de su autoría, premios y reconocimientos a su trabajo..",
+                "img": "david.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Revisor Fiscal",
+        "members": [
+            {
+                "name": "Vicente Cardozo",
+                "bio": "Contador público titulado. Manizaleño. Trabaja con nosotros desde los inicios de la Fundación. Se encarga de mantener al día toda nuestra parte legal.",
+                "img": "placeholder.png"
+            }
+        ]
+    },
+    {
+        "team": "Dirección",
+        "members": [
+            {
+                "name": "Mariana Escobar Calvo",
+                "bio": "Maestra en Artes Plásticas. Fundadora y Directora General de la Fundación Alas de Cristal. Su trabajo personal está basado en la pintura y el dibujo.",
+                "img": "mariana.jpg"
+            }
+        ]
+    }
+]

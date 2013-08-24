@@ -1,0 +1,72 @@
+[
+    {
+        "id": "hint1",
+        "for": "Ahorrar agua en casa",
+        "list": [
+            "Al lavarnos los dientes, afeitarnos o enjabonarnos, cerrar el grifo.",
+            "Bañémonos con una ducha normal y no a  presión y en cinco minutos.",
+            "Utilicemos el inodoro para lo necesario; no lo usemos como basurero.",
+            "Utilicemos un recipiente para lavar y enjuagar los platos.",
+            "Verifiquemos periódicamente todas las instalaciones de agua."
+        ]
+    },
+    {
+        "id": "hint2",
+        "for": "Ahorrar energía en casa",
+        "list": [
+            "Aprovechemos la luz natural y utilicemos bombillas de bajo consumo.",
+            "Desconectemos los aparatos eléctricos que no estemos  usando.",
+            "Mantengamos el congelador de la nevera lleno.",
+            "Guardemos en la nevera los líquidos en recipientes con tapa.",
+            "Usemos bolsas plásticas para guardar en la nevera."
+        ]
+    },
+    {
+        "id": "hint3",
+        "for": "El ahorro de papel",
+        "list": [
+            "Utilicemos las hojas por ambas caras.",
+            "Imprimamos solamente los documentos imprescindibles.",
+            "Reutilicemos las hojas usadas para borradores, tomar notas."
+        ]
+    },
+    {
+        "id": "hint4",
+        "for": "Limitar el uso de plásticos",
+        "list": [
+            "En especial, el uso de bolsas plásticas. ",
+            "Aprendamos a usar bolsas de tela, reutilizables, para ir de compras.",
+            "Usar sólo plásticos biodegradables."
+        ]
+    },
+    {
+        "id": "hint5",
+        "for": "Limitar el uso de químicos en casa",
+        "list": [
+            "Existen productos naturales que reemplazan las fragancias seductoras que, a base de químicos, son muy contaminantes."
+        ]
+    },
+    {
+        "id": "hint6",
+        "for": "Proteger la biodiversidad",
+        "list": [
+            "Conocer las especies amenazadas de fauna y flora.",
+            "Sembrar conciencia ambiental."
+        ]
+    },
+    {
+        "id": "hint7",
+        "for": "Usar el carro en forma racional",
+        "list": [
+            "Utilizar el carro sólo para lo necesario o largas distancias. ",
+            "Utilizar más el transporte público u otros medios de transporte como bicicletas. ",
+            "Compartir el vehículo es una solución. ",
+            "<strong>¡Importante!</strong> el modelo de movilidad basado en un transporte masivo en vehículo privado no es sostenible sea cual sea el combustible empleado."
+        ]
+    }
+]
+
+
+
+
+

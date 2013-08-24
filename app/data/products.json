@@ -1,0 +1,138 @@
+[
+    {
+        "id": "expedicion",
+        "name": "Expedición Colombia",
+        "short_description": "Fascículos dominicales sobre biodiversidad ilustrada de Colombia, zonas protegidas y Parques Nacionales Naturales. 2010.",
+        "images": [
+            {
+                "src": "portada.png",
+                "caption_on": true,
+                "title": "Portada",
+                "description": "Mapa gigante de Colombia."
+            },
+            {
+                "src": "fasciculo1.png",
+                "caption_on": false,
+                "title": "Fascículo 1",
+                "description": ""
+            },
+            {
+                "src": "fasciculo2.png",
+                "caption_on": false,
+                "title": "Fascículo 2",
+                "description": ""
+            },
+            {
+                "src": "fasciculo3.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "mapa-aves",
+        "name": "Colombian Birds",
+        "short_description": "Mapa ilustrado de avifauna colombiana, con destino a Bird Faire, la feria de observadores de aves más grande del mundo. Inglaterra, 2011.",
+        "images": [
+            {
+                "src": "Guia-Aves-01.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Mapa-Aves-01.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "mapa-peces",
+        "name": "Biodiversidad Marina y Dulceacuícola en Colombia",
+        "short_description": "Mapa ilustrado para PROEXPORT COLOMBIA, con destino a la feria de buceo DEMA. Orlando, USA 2011.",
+        "images": [
+            {
+                "src": "Guia-Peces-01.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Mapa-Peces-01.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "album-aves",
+        "name": "Álbum Infantil de Aves en Colombia",
+        "short_description": "Álbum ilustrado infantil con láminas autoadhesivas, sobre aves en Colombia.  Para PROEXPORT COLOMBIA, con destino a las tiendas NATIONAL GEOGRAPHIC de Madrid y Londres.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag2.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Stickers.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "album-peces",
+        "name": "Álbum Infantil de Aves en Colombia",
+        "short_description": "Álbum ilustrado infantil con láminas autoadhesivas, sobre aves en Colombia.  Para PROEXPORT COLOMBIA, con destino a las tiendas NATIONAL GEOGRAPHIC de Madrid y Londres.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag2.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Stickers.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    }
+]

@@ -1,0 +1,441 @@
+$baseFontSize: 14px;
+$pink: #e20265;
+$shadow: #CBA086;
+$blue: #00A9BD;
+
+$linkColor: $blue;
+
+$btnDangerBackground:               lighten($pink, 15%);
+$btnDangerBackgroundHighlight:      $pink;
+
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'sass-bootstrap/lib/responsive';
+
+@font-face {
+    font-family: nexa;
+    src: url("fonts/NexaLight.otf");
+}
+
+@font-face {
+    font-family: chopin;
+    src: url("fonts/ChopinScript.otf");
+}
+
+@font-face {
+    font-family: yanone;
+    src: url("fonts/YanoneKaffeesatz-Regular.ttf");
+}
+
+@font-face {
+    font-family: libelsuit;
+    src: url("fonts/libelsuit.ttf");
+}
+
+.blue { color: $blue; }
+.pink { color: $pink; }
+.item img { margin-right: auto; margin-left: auto; }
+.carousel-control { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+    background: url('../images/elements/formas.png') no-repeat top center, 
+                url('../images/elements/formas2.png') no-repeat top center, 
+                url('../images/elements/background.jpg');
+    color: rgba(0,0,0,0.75);
+    font-family: nexa;
+    margin: 0;
+    padding: 0;
+}
+
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: yanone;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: url('../images/elements/background.jpg');
+    box-shadow: -180px 0px 100px -200px $shadow, 
+                180px 0px 100px -200px $shadow; 
+}
+
+header {
+    background: url('../images/elements/formas2.png') no-repeat top center;
+    min-height: 220px;
+    box-shadow: 0px 50px 50px -60px $shadow;
+    margin-bottom: 50px;
+}
+
+header .hpadded {
+    background: url('../images/elements/barra.png') no-repeat top left;
+    background-origin: content-box;
+}
+
+.header-inner {
+    padding-top: 55px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .header-inner img {
+        margin-left: -60px;
+    }
+}
+
+nav {
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+nav .navigation {
+    display: inline-block;
+    margin: 0;
+    border-left: 1px solid $blue;
+    line-height: 1.5em;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@media (min-width: 480px) {
+    nav .navigation:first-of-type {
+        border-left: none;
+    }
+}
+
+@media (max-width: 979px) {
+    nav .navigation {
+        padding: 0 10px;
+    }
+    nav .navigation:first-of-type {
+        padding-left: 0px;
+    }
+    nav .navigation:last-of-type {
+        padding-right: 0px;
+    }
+
+@media (max-width: 479px) {
+    nav .navigation {
+        display: inline-block;
+        padding: 0;
+        width: 49%;
+        border-left: 1px solid $blue;
+        text-align: left;
+    }
+    nav .navigation a {
+        display: inline-block;
+        padding-left: 20px;
+    }
+}
+
+}
+
+
+nav .navigation:hover {
+    color: rgba(0, 169, 190, 1);
+}
+
+nav .navigation a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    background: url('../images/elements/redtexture.jpg') top center;
+    position: absolute;
+    width: 240px;
+    height: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top:250px;
+    right: 50%;
+    margin-right: -120px;
+    z-index: 100;
+}
+
+footer {
+    box-shadow: 0px -50px 50px -60px $shadow;
+    margin-top: 150px;
+}
+
+footer .hpadded {
+    background: url('../images/elements/barrainv.png') no-repeat bottom left;
+    background-origin: content-box;
+    min-height: 200px;
+    text-align: right;
+}
+
+.footer-inner {
+    padding-top: 25px;
+    padding-bottom: 55px;
+}
+
+@media (max-width: 479px) {
+    .hpadded {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hpadded {
+        padding: 0 20px;
+    }    
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .hpadded {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 980px) {
+    .hpadded {
+        padding: 0 125px;
+    }
+}
+
+.content-inner {
+    min-height: 500px;
+}
+
+.contactenos {
+    width: 188px;
+    background: url('../images/elements/bluetexture.jpg') $blue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-top: -80px;
+    padding-bottom: 10px;
+    margin-bottom: -80px;
+    color: #fffdcc;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.contactenos h2 {
+    font-family: nexa;
+    font-weight: normal;
+    font-size: 37px;
+}
+
+.contactenos form {
+    padding: 10px;
+}
+
+.contactenos form fieldset button {
+    margin-top: 10px;
+}
+
+@media (max-width: 479px) {
+    .contactenos {
+        display: none;
+    }
+}
+
+input,
+button {
+    font-family: nexa;
+}
+
+.btn-pink {
+    background-color: $pink;
+    box-shadow: none;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    color: $white;
+}
+
+.btn-pink:active,
+.btn-pink:hover  {
+    background-color: darken($pink, 10%);
+}
+
+// Info
+
+.social {
+    background: url('../images/elements/bluetexture.jpg') $blue;
+    border-radius: 5px;
+    color: $white;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px 0px 10px;
+}
+
+.fb-like {
+    display: inline-block;
+}
+
+.info {
+    font-family: yanone;
+    font-size: 120%;
+    color: $grayLight;
+}
+
+.info .email a {
+    color: $gray;
+    font-size: 115%;
+}
+
+.copy-symbol {
+    font-family: nexa;
+}
+
+@media (max-width: 479px) {
+    .info {
+        margin-right: -5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .info {
+        margin-right: -10px;
+    }    
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .info {
+        margin-right: -80px;
+    }
+}
+
+@media (min-width: 980px) {
+    .info {
+        margin-right: -100px;
+    }
+}
+
+// landing
+
+#almanac {
+    text-align: center;
+    margin-left: -55px;
+}
+
+#almanac h2 {
+    display: inline-block;
+    text-align: right;
+    font-family: chopin;
+    color: darken(#c19379, 20%);
+    font-size: 64px;
+    line-height: 72%;
+}
+
+#almanac h2 small {
+    font-family: yanone;
+    color: darken(#c19379, 20%);
+    font-size: 24px;
+    line-height: 90%;
+}
+
+.double-inline {
+    display: inline-block;
+    text-transform: uppercase;
+    text-align: left;
+    margin-right: -90px;
+}
+
+.year {
+    display: inline-block;
+}
+
+.year * strong {
+    font-family: yanone;
+    font-weight: normal;
+    font-size: 250%;
+    color: $blue;
+}
+
+#almanac h2 .slogan small {
+    font-size: 14px;
+}
+
+#almanac h2 .slogan {
+    display: block;
+    margin-top: -30px;
+}
+
+.almanac-logo {
+    text-align: center;
+}
+
+.dl-horizontal dt {
+    text-align: left;
+}
+
+// Team
+
+.member * img {
+    height: 120px;
+}
+
+.team {
+    margin-bottom: 50px;
+}
+
+
+// Products
+
+.modal {
+    background: url('../images/elements/background.jpg');
+}
+
+.carousel-caption {
+    text-align: left;
+}
+
+.thumbnail {
+    border: none;
+}
+
+article.thumbnail h3 {
+    line-height: 100%;
+}
+
+// Agenda
+
+#hintsaccordion .accordion-group .accordion-heading {
+    height: 55px;
+}
+#hintsaccordion .accordion-group .accordion-heading h4 {
+    line-height: 95%;
+}
+
+#hintsaccordion .accordion-group:nth-child(1) .accordion-heading {
+    background: url('../images/ala/01.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(2) .accordion-heading {
+    background: url('../images/ala/02.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(3) .accordion-heading {
+    background: url('../images/ala/03.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(4) .accordion-heading {
+    background: url('../images/ala/04.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(5) .accordion-heading {
+    background: url('../images/ala/05.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(6) .accordion-heading {
+    background: url('../images/ala/06.png') top right;
+    /* background-size: cover; */
+}
+#hintsaccordion .accordion-group:nth-child(7) .accordion-heading {
+    background: url('../images/ala/07.png') top right;
+    /* background-size: cover; */
+}

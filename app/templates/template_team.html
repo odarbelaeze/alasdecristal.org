@@ -1,0 +1,14 @@
+<section class="team">
+	<h3><%= team.team %></h3>
+	<% _.each(team.members, function(member) { %> 
+	<article class="member media">
+		<div class="pull-left">
+			<img src="images/team/<%= member.img %>" class="img-rounded" alt="<%= member.name %>" />
+		</div>
+		<div class="media-body">
+			<h4><%= member.name %></h4>
+			<p><%= member.bio %></p>
+		</div>
+	</article> 
+	<% }) %>
+</section>

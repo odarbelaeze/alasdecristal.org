@@ -1,0 +1,48 @@
+<div class="row-fluid">
+    <ul class="thumbnails">
+        <% _.each(products, function (product) { %>
+
+        <li class="span4">
+            <article id="<%= product.id %>" class="product thumbnail">
+                <a href="#modal<%= product.id %>" role="button" data-toggle="modal">
+                    <img class="img-polaroid" src="/images/products/<%= product.id %>/thumbnail.png" alt="<%= product.id %>" />
+                </a>
+                <h3> <%= product.name %> </h3>
+                <p> <%= product.short_description %> </p>
+                <a href="#modal<%= product.id %>" role="button" data-toggle="modal"><strong style="font-size: 150%;">Ver <span class="pink">&raquo;</span></strong></a>                         
+                <!-- Modal -->
+                <div id="modal<%= product.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modal<%= product.id %>Label" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="modal<%= product.id %>Label"> <%= product.name %> </h3>
+                    </div>
+                    <div class="modal-body">
+                        <section class="slider">
+                            <div id="carousel<%= product.id %>" class="carousel slide">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <% _.each(product.images, function(img) {%>
+                                        <div class="item" style="text-align: center;">
+                                            <img src="/images/products/<%= product.id %>/<%= img.src %>" alt="<%= img.title %>">
+                                            <% if (img.caption_on) { %>
+                                            <div class="carousel-caption">
+                                                <h4> <%= img.title %> </h4>
+                                                <p> <%= img.description %> </p>
+                                            </div>
+                                            <% } %>
+                                        </div>
+                                    <%}) %>
+                                </div>
+
+                                <a class="carousel-control left" href="#carousel<%= product.id %>" data-slide="prev">&lsaquo;</a>
+                                <a class="carousel-control right" href="#carousel<%= product.id %>" data-slide="next">&rsaquo;</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </li>
+            
+        <% }) %>
+    </ul>
+</div>
