@@ -33,9 +33,30 @@ require(['app', 'jquery', 'marked', 'bootstrap', 'underscore'], function (app, $
         $.get('/templates/template_product.html', function (template) {
             var productTemplate = _.template(template);
             $.getJSON('/data/new_products.json', function (data) {
-                $('#featured').append(productTemplate({ products: data }));
-                $('.carousel-inner').each(function () {
-                    $(this).children('.item:first').addClass('active');
+                var tasks = [];
+                _.each(data, function (product) {
+                    var request = $.get('/data/products/' + product.id + '.md', function (text) {
+                        product.description = marked(text);
+                    });
+                    tasks.push(request);
+                });
+                $.when.apply($, tasks).then(function () {
+                    var i = 0;
+                    console.log('Doing this');
+                    while (i < data.length) {
+                        $('#featured').append(productTemplate({ products: data.slice(i, i + 3) }));
+                        i = i + 3;
+                    }
+                    $('.carousel-inner').each(function () {
+                        $(this).children('.item:first').addClass('active');
+                    });
+                    $('.product-collapser').click(function (evt) {
+                        if ($('.collapse.in').size()) {
+                            evt.preventDefault();
+                            $('.collapse.in').collapse('hide');
+                        }
+                    });
+                    $('.description-text>dl').addClass('dl-horizontal');
                 });
             });
         });
@@ -44,15 +65,32 @@ require(['app', 'jquery', 'marked', 'bootstrap', 'underscore'], function (app, $
     if ($('#products').size()) {
         $.get('/templates/template_product.html', function (template) {
             var productTemplate = _.template(template);
-            $.getJSON('/data/products.json', function (data) {
-                var i = 0;
-                while(i < data.length) {
-                    $('#products').append(productTemplate({ products: data.slice(i, i + 3) }));
+            $.getJSON('/data/products.json', function(data) {
+                var tasks = [];
+                _.each(data, function (product) {
+                    var request = $.get('/data/products/' + product.id + '.md', function (text) {
+                        product.description = marked(text);
+                    });
+                    tasks.push(request);
+                });
+                $.when.apply($, tasks).then(function () {
+                    var i = 0;
+                    console.log('Doing this');
+                    while (i < data.length) {
+                        $('#products').append(productTemplate({ products: data.slice(i, i + 3) }));
+                        i = i + 3;
+                    }
                     $('.carousel-inner').each(function () {
                         $(this).children('.item:first').addClass('active');
                     });
-                    i += 3;
-                }
+                    $('.product-collapser').click(function (evt) {
+                        if ($('.collapse.in').size()) {
+                            evt.preventDefault();
+                            $('.collapse.in').collapse('hide');
+                        }
+                    });
+                    $('.description-text>dl').addClass('dl-horizontal');
+                });
             });
         });
     }

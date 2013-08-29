@@ -1,8 +1,34 @@
 [
     {
-        "id": "album-aves",
-        "name": "Álbum Infantil de Aves en Colombia",
-        "short_description": "Álbum ilustrado infantil con láminas autoadhesivas, sobre aves en Colombia.  Para PROEXPORT COLOMBIA, con destino a las tiendas NATIONAL GEOGRAPHIC de Madrid y Londres.",
+        "id": "alamanaque-biodiversidad",
+        "name": "Almanaque Ambiental de Biodiversidad en Colombia 2014",
+        "short_description": "Es un producto educativo, cultural, científico y artístico.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag2.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag3.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "guia-aves",
+        "name": "Guía de Aves en Colombia",
+        "short_description": "Una muestra de las aves más representativas de Colombia.",
         "images": [
             {
                 "src": "Portada.png",
@@ -15,15 +41,97 @@
                 "caption_on": false,
                 "title": "",
                 "description": ""
-            },
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "guia-peces",
+        "name": "Guía de Peces en Colombia",
+        "short_description": "Una muestra de las especies marinas y dulceacuícolas más representativas de Colombia.",
+        "images": [
             {
-                "src": "Pag2.png",
+                "src": "Portada.png",
                 "caption_on": false,
                 "title": "",
                 "description": ""
             },
             {
-                "src": "Stickers.png",
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "guia-mariposas",
+        "name": "Guía de Mariposas en Colombia",
+        "short_description": "Una muestra de las mariposas más representativas de Colombia.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "mapa-aves",
+        "name": "Mapa de Aves en Colombia",
+        "short_description": "Mapa ilustrado con la avifauna más representativa de Colombia.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "GuiaAvesIngles.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "mapa-colombia",
+        "name": "Mapa de Biodiversidad en Colombia",
+        "short_description": "Mapa ilustrado por el Maestro César Landazábal con  la biodiversidad más representativa de Colombia.",
+        "images": [
+            {
+                "src": "Portada.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            },
+            {
+                "src": "Pag1.png",
+                "caption_on": false,
+                "title": "",
+                "description": ""
+            }
+        ],
+        "cotas": ""
+    },
+    {
+        "id": "nueva-ciudadania",
+        "name": "Nueva Ciudadanía",
+        "short_description": "\"Una semilla de cultura ciudadana para sembrar ciudadanos de la Tierra\".",
+        "images": [
+            {
+                "src": "Portada.png",
                 "caption_on": false,
                 "title": "",
                 "description": ""

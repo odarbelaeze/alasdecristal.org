@@ -5,25 +5,33 @@
         "short_description": "Fascículos dominicales sobre biodiversidad ilustrada de Colombia, zonas protegidas y Parques Nacionales Naturales. 2010.",
         "images": [
             {
+                "src": "expedicion.png",
+                "caption_on": true,
+                "title": "Portada",
+                "description": "Mapa gigante de Colombia."
+            }
+        ],
+        "other-images": [
+            {
                 "src": "portada.png",
                 "caption_on": true,
                 "title": "Portada",
                 "description": "Mapa gigante de Colombia."
             },
             {
-                "src": "fasciculo1.png",
+                "src": "Pag1.png",
                 "caption_on": false,
                 "title": "Fascículo 1",
                 "description": ""
             },
             {
-                "src": "fasciculo2.png",
+                "src": "Pag2.png",
                 "caption_on": false,
                 "title": "Fascículo 2",
                 "description": ""
             },
             {
-                "src": "fasciculo3.png",
+                "src": "Pag3.png",
                 "caption_on": false,
                 "title": "",
                 "description": ""
@@ -32,7 +40,7 @@
         "cotas": ""
     },
     {
-        "id": "mapa-aves",
+        "id": "colombian-birds",
         "name": "Colombian Birds",
         "short_description": "Mapa ilustrado de avifauna colombiana, con destino a Bird Faire, la feria de observadores de aves más grande del mundo. Inglaterra, 2011.",
         "images": [
