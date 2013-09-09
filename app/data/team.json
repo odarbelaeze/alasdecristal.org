@@ -18,7 +18,7 @@
         "team": "Investigadores",
         "members": [
             {
-                "name": "Gary Stiles",
+                "name": "F. Gary Stiles",
                 "bio": "Ornitólogo norteamericano con numerosas publicaciones, premios y reconocimientos a su labor. Es altamente reconocido a nivel mundial por su trayectoria. Los colibríes son las aves de su preferencia en la investigación.",
                 "img": "gary.jpg"
             },
@@ -130,7 +130,17 @@
             {
                 "name": "Vicente Cardozo",
                 "bio": "Contador público titulado. Manizaleño. Trabaja con nosotros desde los inicios de la Fundación. Se encarga de mantener al día toda nuestra parte legal.",
-                "img": "placeholder.png"
+                "img": "vicente.jpg"
+            }
+        ]
+    },
+    {
+        "team": "Subdirección",
+        "members": [
+            {
+                "name": "Juan Salvador Escobar",
+                "bio": "Ingeniero Electrónico, subdirector de la fundación. Actualmente reside en Tampa, Florida y es nuestro representante en Estados Unidos.",
+                "img": "juan.jpg"
             }
         ]
     },

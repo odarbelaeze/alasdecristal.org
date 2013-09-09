@@ -261,6 +261,20 @@ button {
     background-color: darken($pink, 10%);
 }
 
+.btn-blue {
+    background-color: $blue;
+    box-shadow: none;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    color: $white;
+}
+
+.btn-blue:active,
+.btn-blue:hover  {
+    background-color: darken($blue, 10%);
+}
+
 // Info
 
 .social {
@@ -438,4 +452,71 @@ article.thumbnail h3 {
 #hintsaccordion .accordion-group:nth-child(7) .accordion-heading {
     background: url('../images/ala/07.png') top right;
     /* background-size: cover; */
+}
+
+// Contact page
+
+#contact-form {
+    background: url('../images/elements/ala.png') bottom right no-repeat, $blue;
+}
+
+#quote-form {
+    background: url('../images/elements/ala.png') bottom right no-repeat, $pink;
+}
+
+#contact-form,
+#quote-form {
+    padding: 20px 50px;
+    border-radius: 10px;
+    color: #fffdcc;
+}
+
+#contact-form h2,
+#quote-form h2 {
+    font-family: nexa;
+    font-weight: normal;
+    text-align: center;
+    font-size: 26px;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+#contact-form button,
+#quote-form button {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: nexa;
+}
+
+#contact-info {
+    margin-top: 50px;
+}
+
+#contact-info * h3,
+#contact-info * * h3,
+#contact-info * h2,
+#contact-info * * h2 {
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 479px) {
+    #contact-form h2,
+    #quote-form h2 {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    #contact-form,
+    #quote-form {
+        padding: 20px 20px;
+    }
 }

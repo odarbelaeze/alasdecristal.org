@@ -1,8 +1,8 @@
 #### Descripción
 
 *   Mapa ilustrado con la avifauna más representativa de Colombia para PROEXPORT COLOMBIA. Con destino a Bird Fair, la feria de observadores de aves más grande del mundo que se lleva a cabo en Inglaterra.
-*   Año: 2011.
-*   Idioma: inglés.
+*   Idioma: Inglés
+*   Año: 2011
 
 #### Características:
 
