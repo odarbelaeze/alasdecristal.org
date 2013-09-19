@@ -1,0 +1,73 @@
+/* 
+    Styles that are specific to the header section. Using the power
+    of scss.
+ */
+
+header {
+    background: url('../images/elements/formas2.png') no-repeat top center;
+    box-shadow: 0px 50px 50px -60px $shadowColor;
+    margin-bottom: 50px;
+    min-height: 220px;
+
+    #header-inner {
+        background: url('../images/elements/barra.png') no-repeat top left;
+        padding-top: 55px;
+        padding-bottom: 25px;
+        #logo {
+            img {
+                @include img-responsive;
+            }
+            @media (min-width: 768px) {
+                margin-left: -60px;
+            }
+        }
+    }
+}
+
+nav {
+    display: block;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    text-align: center;
+
+    .navitem {
+        display: inline-block;
+        margin: 0;
+        
+        a {
+            border-left: 1px solid $blue;
+            color: inherit;
+            display: block;
+            padding-right: 20px;
+            padding-left: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:active,
+            &:focus,
+            &:hover {
+                color: $blue;
+            }
+        }
+        
+        @media (max-width: 479px) {
+            display: inline-block;
+            width: 49%;
+            text-align: left;
+        }
+
+        &:first-of-type a {
+            @media (min-width: 480px) {
+                border-left: none;
+                padding-left: 0px;
+            }
+        }
+
+        &:last-of-type a {
+            @media (min-width: 480px) {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+

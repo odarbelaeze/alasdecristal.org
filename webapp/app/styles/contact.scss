@@ -1,0 +1,52 @@
+/* 
+    Styles for the contact page.
+ */
+
+#contact-form,
+#quote-form {
+    @include make-md-column(6);
+    border-radius: 10px;
+    color: #fffdcc;
+    padding: 20px 50px;
+
+    h2 {
+        font-family: nexa;
+        font-size: 26px;
+        font-weight: normal;
+        margin-left: -50px;
+        margin-right: -50px;
+        text-align: center;
+    }
+
+    button {
+        font-weight: bold;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 479px) {
+        
+        padding: 20px 20px;
+
+        & h2 {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    }
+
+}
+
+#contact-info {
+    margin-top: 50px;
+
+    * {
+        h2, * h2,
+        h3, * h3 {
+            line-height: 100%;
+            margin: 0;
+            margin-top: 5px;
+            padding: 0;
+        }
+    }
+ 
+}
+

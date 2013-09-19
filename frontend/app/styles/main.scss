@@ -124,6 +124,9 @@ nav .navigation {
         padding-right: 0px;
     }
 
+
+}
+
 @media (max-width: 479px) {
     nav .navigation {
         display: inline-block;
@@ -137,9 +140,6 @@ nav .navigation {
         padding-left: 20px;
     }
 }
-
-}
-
 
 nav .navigation:hover {
     color: rgba(0, 169, 190, 1);

@@ -1,91 +1,95 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+/* 
+    In this file all the generic styles and inports should be
+    done.
+ */
+
+
+$icon-font-path:    "/bower_components/sass-bootstrap/fonts/";
+$font-size-base:    14px;
+$blue:              #00A9BD;
+$coffee:            #C19379;
+$pink:              #e20265;
+$shadowColor:       #CBA086;
+$white:             #FFFDCC;
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+@import 'custom-mixins';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+@import 'landing';
+@import 'products';
+@import 'agenda';
+@import 'contact';
 
-/* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background: url('../images/elements/formas.png') no-repeat top center, 
+                url('../images/elements/formas2.png') no-repeat top center, 
+                url('../images/elements/background.jpg');
+    font-family: nexa;
+    margin: 0;
+    padding: 0;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: yanone;
+    font-weight: normal;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
+.container {
+    background: url('../images/elements/background.jpg');
+    box-shadow: -180px 0px 100px -200px $shadowColor,
+                 180px 0px 100px -200px $shadowColor;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.content {
+    min-height: 800px;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+header,
+.content,
+footer {
+    @include hpadded;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+.blue { color: $blue; }
+.pink { color: $pink; }
+
+.btn-pink {
+    @include flat-btn($white, $pink);
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+.btn-blue {
+    @include flat-btn($white, $blue);
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+.copy-symbol {
+    font-family: nexa;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
+.carousel {
+    .carousel-indicators li {
+        box-shadow: 0px 0px 5px 1px darken($shadowColor, 10%),
+              inset 0px 0px 5px 1px darken($shadowColor, 10%);
 
-.marketing p + h4 {
-    margin-top: 28px;
-}
+        &.active {
+            box-shadow: 0px 0px 5px 1px darken($shadowColor, 10%);
+        }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
     }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+    
+    .carousel-inner img {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

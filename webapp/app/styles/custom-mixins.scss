@@ -1,0 +1,26 @@
+/* 
+    Some useful mixins, used only in this webpage.
+ */
+
+@mixin hpadded {
+    @media (max-width: 479px) {
+            padding: 0 10px;
+    }
+
+    @media (max-width: 767px) {
+            padding: 0 20px;
+   
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+            padding: 0 100px;
+    }
+
+    @media (min-width: 980px) {
+            padding: 0 125px;
+    }
+}
+
+@mixin flat-btn($color, $bgcolor) {
+    @include button-variant($color, $bgcolor, $bgcolor);
+}

@@ -1,3 +1,5 @@
 django
+django-tastypie
 django-extensions
+Werkzeug
 South

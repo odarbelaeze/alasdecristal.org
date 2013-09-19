@@ -1,4 +1,4 @@
-// Generated on 2013-09-10 using generator-webapp 0.4.2
+// Generated on 2013-09-11 using generator-webapp 0.4.2
 'use strict';
 
 // # Globbing
@@ -46,7 +46,8 @@ module.exports = function (grunt) {
                     '<%= yeoman.app %>/*.html',
                     '.tmp/styles/{,*/}*.css',
                     '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-                    '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '<%= yeoman.app %>/images/{,*/,*/*/}*.{png,jpg,jpeg,gif,webp,svg}',
+                    '<%= yeoman.app %>/data/{,*/}*.{json,md}'
                 ]
             }
         },
@@ -202,7 +203,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+                        '<%= yeoman.dist %>/images/{,*/,*/*/}*.{png,jpg,jpeg,gif,webp}',
                         '<%= yeoman.dist %>/styles/fonts/{,*/}*.*'
                     ]
                 }
@@ -226,7 +227,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
+                    src: '{,*/,*/*/}*.{png,jpg,jpeg}',
                     dest: '<%= yeoman.dist %>/images'
                 }]
             }
@@ -291,6 +292,7 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.{webp,gif}',
                         'styles/fonts/{,*/}*.*',
+                        'data/{,*/}*.{md,json}',
                         'bower_components/sass-bootstrap/fonts/*.*'
                     ]
                 }]
@@ -302,16 +304,6 @@ module.exports = function (grunt) {
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
             }
-        },
-        modernizr: {
-            devFile: '<%= yeoman.app %>/bower_components/modernizr/modernizr.js',
-            outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
-            files: [
-                '<%= yeoman.dist %>/scripts/{,*/}*.js',
-                '<%= yeoman.dist %>/styles/{,*/}*.css',
-                '!<%= yeoman.dist %>/scripts/vendor/*'
-            ],
-            uglify: true
         },
         concurrent: {
             server: [
@@ -373,9 +365,8 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
-        'modernizr',
         'copy:dist',
-        'rev',
+        //'rev',
         'usemin'
     ]);
 

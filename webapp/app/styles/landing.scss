@@ -1,0 +1,52 @@
+/* 
+    Specific styles for the landing page.
+ */
+
+#almanac-title {
+    margin-left: -55px;
+    text-align: center;
+
+    h2 {
+        color: darken($coffee, 20%);
+        display: inline-block;
+        font-family: chopin;
+        font-size: 64px;
+        line-height: 72%;
+        text-align: right;
+
+        small {
+            color: darken(#c19379, 20%);
+            font-family: yanone;
+            font-size: 24px;
+            line-height: 90%;
+
+            .double-inline {
+                display: inline-block;
+                margin-right: -90px;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+
+        .slogan {
+                display: block;
+                margin-top: -30px;
+
+                small {
+                    font-size: 14px;
+                }
+        }
+
+        .year {
+            display: inline-block;
+
+            * strong {
+                    font-family: yanone;
+                    font-weight: normal;
+                    font-size: 250%;
+                    color: $blue;
+            }
+        }
+    }
+
+}

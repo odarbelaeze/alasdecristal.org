@@ -1,0 +1,88 @@
+/* 
+    Styles that are related to the footer.
+ */
+
+footer {
+    box-shadow: 0px -50px 50px -60px $shadowColor;
+    margin-top: 150px;
+    min-height: 200px;
+
+    #footer-inner {
+        background: url('../images/elements/barrainv.png') no-repeat bottom left;
+        min-height: 200px;
+        padding-top: 25px;
+        padding-bottom: 55px;
+        text-align: right;
+    }
+}
+
+#footer-contact {
+    background: url('../images/elements/bluetexture.jpg') $blue;
+    border-radius: 8px;
+    color: $white;
+    margin-bottom: 20px;
+    margin-top: -80px;
+    padding: 10px;
+    text-align: left;
+
+    @media (min-width: 480px) {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        float: left !important;
+        margin-bottom: -55px;
+        padding: 10px 0px;
+        width: 188px;
+    }
+
+    h2 {
+        font-family: nexa;
+        font-weight: normal;
+        font-size: 37px;
+    }
+
+    form {
+        padding: 10px;
+    }
+}
+
+#footer-info {
+    font-family: yanone;
+    font-size: 120%;
+    color: $gray-light;
+
+    #footer-social {
+        background: url('../images/elements/bluetexture.jpg') $blue;
+        border-radius: 5px;
+        color: $white;
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 5px 10px 0px 10px;
+    }
+
+    #alas-email a {
+        color: $gray;
+        font-size: 115%;
+    }
+
+    @media (max-width: 479px) {
+        
+        margin-right: -5px;
+    }
+
+    @media (max-width: 767px) {
+        
+        margin-right: -10px;    
+    }
+
+    @media (min-width: 768px) and (max-width: 979px) {
+        
+        margin-right: -80px;
+    }
+
+    @media (min-width: 980px) {
+        
+        margin-right: -100px;
+    }
+
+
+}
