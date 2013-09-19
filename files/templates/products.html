@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Fundación Alas de cristal
+{% endblock title %}
+
+{% block description %}
+    Productos y proyectos realizados por la Fundación Alas de Cristal.
+{% endblock description %}
+
+{% block extra_head %}{% endblock extra_head %}
+
+{% block content %}
+    <section id="pithch">
+        <p class="lead">Nuestros productos son material educativo, cultural, científico y artístico; son exclusivos y originales, elaborados por especialistas, con el aval del Instituto Alexander von Humboldt; son de gran impacto, alta recordación, alta penetración y bajo costo, y son excelentes para promocionar y fortalecer la imagen empresarial e institucional.</p>
+    </section>
+
+    <style>
+        .thumbnail {
+            background-color: transparent;
+        }
+    </style>
+
+    <section id="featured">
+        <h2>Nuevos productos</h2>
+        {% for bucket in featured %}
+            <div class="row">
+                {% for product in bucket %}
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="{{ STATIC_URL }}images/products/{{ product.id }}/thumbnail.png" alt="...">
+                            <div class="caption">
+                                <h4> {{ product.name }} </h4>
+                                <p> {{ product.short_description }} </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </section>
+
+
+    <section id="products">
+        <h2>Proyectos realizados</h2>
+    </section>
+
+    <section id="product-traits">
+        <h2>Caracterísiticas de nuestros productos</h2>
+        <ul>
+            <li>Tenemos un propósito educativo y buscamos desarrollar productos didácticos, instructivos y pedagógicos para la población en general. De manera especial, nos interesan los niños.</li>
+            <li>Tenemos una intención ecológica y ambiental, y una invitación a la defensa, protección y conservación de las especies.</li>
+            <li>Buscamos desarrollar nuestros productos con un alto criterio  artístico.</li>
+            <li>Para nosotros es primordial contar con especialistas que avalen todo nuestro contenido informativo e investigativo.</li>
+        </ul>
+    </section>
+{% endblock content %}
+

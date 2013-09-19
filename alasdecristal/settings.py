@@ -28,6 +28,14 @@ DATABASES = {
     }
 }
 
+# Email settings
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'contacto@alasdecristal.org'
+EMAIL_HOST_PASSWORD = 'Lacontradelcontactodeala$'
+EMAIL_PORT = 587
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -76,6 +84,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'webapp', 'dist'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -90,7 +99,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'pkm!3&cy&1x63v@oeje9slx0b2dq)vksp^q_77iox!(&jqv7%g'
+SECRET_KEY = 'pkm!3&cy&1x63v@oeje9s44922dq)vksp^q_77iox!(&jqv7%g'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -115,6 +124,7 @@ ROOT_URLCONF = 'alasdecristal.urls'
 WSGI_APPLICATION = 'alasdecristal.wsgi.application'
 
 TEMPLATE_DIRS = (
+    os.path.join(PROJECT_ROOT, 'files', 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -128,9 +138,16 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+
+    # My apps:
+
+    # Third pary apps:
+    'django_extensions',
+    'south',
+    'tastypie',
 )
 
 # A sample logging configuration. The only tangible logging
