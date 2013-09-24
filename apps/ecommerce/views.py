@@ -16,6 +16,8 @@ from ecommerce.forms import *
 class NewsletterSuscriptionCreate(CreateView):
     model = NewsletterSuscription
     form_class = NewsletterSuscriptionForm
+    template_name = 'ecommerce/newsletter_form.html'
+    success_url = '/ecommerce/contact/thanks/'
 
 
 class ContactCreate(CreateView):
