@@ -9,6 +9,42 @@
 {% endblock extra_head %}
 
 {% block content %}
-    Contacto
+    <div class="row">
+        <div class="form-wrapper">
+            <div id="contact-form">
+                <h2>CONTÁCTENOS</h2>
+                <form class="ajax-form" role="form" data-source="{% url 'contact-add' %}" data-success="{% url 'contact-thanks' %}" action="{% url 'contact-add' %}">
+                </form>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <div id="quote-form">
+                <h2>SOLICITE UNA COTIZACIÓN</h2>
+                <form class="ajax-form" role="form" data-source="{% url 'quote-add' %}" data-success="{% url 'contact-thanks' %}" action="{% url 'quote-add' %}">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact-info">
+        <div class="row">
+            <article id="info-bogota" class="col-sm-6">
+                <h2 class="name"><span class="blue">Fundación Alas de Cristal</span> <br> <small style="font-size: 22px;" class="pink">Bogotá - Colombia</small></h2>
+                <div class="addres" style="font-size:16px; line-height: 22px;"><strong class="muted">Cr 16 # 32 – 83</strong> </div>
+                <div class="phone" style="font-size:16px; line-height: 22px;"><strong class="muted">(57)(1) 2 85 85 60</strong></div>
+                <h3><strong class="pink">Contacto</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:fundacion@alasdecristal.org">fundacion@alasdecristal.org</a>
+                <h3><strong class="pink">Dirección General</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:direccion@alasdecristal.org">direccion@alasdecristal.org</a>
+            </article>
+            <article id="info-us" class="col-sm-6">
+                <h2 class="name"><span class="blue">Fundación Alas de Cristal</span> <br> <small style="font-size: 22px;" class="pink">Tampa, FL - Estados Unidos</small></h2>
+                <div class="addres" style="font-size:16px; line-height: 22px;"><strong class="muted">6211 Savannah Breeze Ct.</strong></div>
+                <div class="phone" style="font-size:16px; line-height: 22px;"><strong class="muted">(813) 382 7416</strong> </div>
+                <h3><strong class="pink">Contacto</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:fundacionalasdecristal@alasdecristal.org">fundacionalasdecristal@alasdecristal.org</a>
+            </article>
+        </div>
+    </section>
 {% endblock content %}
 

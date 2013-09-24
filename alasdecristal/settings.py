@@ -143,6 +143,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     # My apps:
+    'ecommerce',
 
     # Third pary apps:
     'django_extensions',

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Fundación Alas de cristal
+    Agenda ambiental propuesta por la Fundación Alas de cristal.
 {% endblock title %}
 
 {% block extra_head %}
@@ -9,6 +9,52 @@
 {% endblock extra_head %}
 
 {% block content %}
-    Agenda
-{% endblock content %}
+    <section id="agenda">
+        <h2>Nuestra Agenda Ambiental</h2>
+        <ol>
+            <li>Ahorrar energía en casa. </li>
+            <li>Ahorrar agua en casa.</li>
+            <li>Aprender a reciclar.</li>
+            <li>Ahorrar papel.</li>
+            <li>Limitar el uso de plásticos.</li>
+            <li>Usar envases biodegradables</li>
+            <li>Limitar el uso de químicos en casa.</li>
+            <li>Usar el carro racionalmente.</li>
+            <li>Proteger la biodiversidad</li>
+            <li>Pensar global y actuar local.</li>
+        </ol>
+    </section>
 
+    <section id="recycle">
+        <h2>Aprender a reciclar</h2>
+        <p>La manera más fácil de aprender a reciclar es con la norma de   las tres R: Reducir, Reutilizar, Reciclar.</p> 
+
+        <h3>Reduzcamos</h3>
+        <ul>
+            <li>Reducimos cuando consumimos racionalmente y evitamos el derroche:</li>
+            <li>Elijamos los productos con menos envoltorios. </li>
+            <li>Llevemos al mercado una bolsa reutilizable o el carrito.</li>
+            <li>Limitemos el consumo de productos de usar y tirar. </li>
+        </ul>
+
+        <h3>Reutilicemos</h3>
+        <ul>
+            <li>Reutilizar consiste en darle la máxima utilidad a las cosas.</li>
+            <li>Compremos líquidos en botellas de vidrio retornables </li>
+            <li>Utilicemos el papel por las dos caras </li>
+            <li>Regalemos la ropa que no usamos </li>
+        </ul>
+
+        <h3>Reciclemos</h3>
+        <ul>
+            <li>Reciclar consiste en usar los materiales una y otra vez. Separemos en casa:</li>
+            <li>Materia orgánica (restos de comidas). </li>
+            <li>Papel, cartón, vidrio, metales, plástico.</li>
+        </ul>
+    </section>
+
+    <section id="hints">
+        <h2>Recomendaciones para...</h2>
+        {% include "snipets/hints.html" %}
+    </section>
+{% endblock content %}

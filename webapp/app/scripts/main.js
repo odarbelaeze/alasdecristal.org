@@ -1,6 +1,7 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        dynamicFormset: '../bower_components/django-dynamic-formset/src/jquery.formset',
         underscore: '../bower_components/underscore/underscore',
         marked: '../bower_components/marked/lib/marked',
         bootstrapAffix: '../bower_components/sass-bootstrap/js/affix',
@@ -9,6 +10,7 @@ require.config({
         bootstrapCarousel: '../bower_components/sass-bootstrap/js/carousel',
         bootstrapCollapse: '../bower_components/sass-bootstrap/js/collapse',
         bootstrapDropdown: '../bower_components/sass-bootstrap/js/dropdown',
+        bootstrapModal: '../bower_components/sass-bootstrap/js/modal',
         bootstrapPopover: '../bower_components/sass-bootstrap/js/popover',
         bootstrapScrollspy: '../bower_components/sass-bootstrap/js/scrollspy',
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
@@ -16,6 +18,9 @@ require.config({
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition'
     },
     shim: {
+        dynamicFormset: {
+            deps: ['jquery']
+        },
         bootstrapAffix: {
             deps: ['jquery']
         },
@@ -32,6 +37,9 @@ require.config({
             deps: ['jquery']
         },
         bootstrapDropdown: {
+            deps: ['jquery']
+        },
+        bootstrapModal: {
             deps: ['jquery']
         },
         bootstrapPopover: {
@@ -52,12 +60,72 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'marked', 'underscore',
-         'bootstrapCarousel', 'bootstrapCollapse', 'bootstrapTransition'
+require(['app',
+         'jquery',
+         'marked',
+         'underscore',
+         'dynamicFormset',
+         'bootstrapCarousel',
+         'bootstrapCollapse',
+         'bootstrapModal',
+         'bootstrapTransition'
     ], function (app, $, marked) {
     'use strict';
 
-    $('.carousel').carousel();
+    $('.carousel-inner').each(function () {
+        $(this).children('.item:first').addClass('active');
+    });
+
+    $('.carousel-indicators').each(function () {
+        $(this).children('li:first').addClass('active');
+    });
+
+    $('.marked').each(function () {
+        var $this = $(this);
+        if ($this.data('source')) {
+            $.get($this.data('source'), function (data) {
+                $this.html(marked(data));
+                $('.product-description  dl').addClass('dl-horizontal');
+            });
+        }
+        else {
+            $this.html(marked($this.text()));
+        }
+    });
+    
+    var formsetOptions = {
+        prefix: 'quoteline_set',
+        addCssClass: 'btn btn-default pull-rigth',
+        addText: '<span class= "glyphicon glyphicon-plus-sign"></span> Agregar',
+        deleteCssClass: 'btn btn-default col-xs-2',
+        deleteText: '<span class= "glyphicon glyphicon-minus-sign"></span>'
+    };
+
+    $('.ajax-form').each(function () {
+        var $this = $(this);
+        $.get($this.data('source'), function (data) {
+            $this.html(data);
+            $this.submit(function (evt) {
+
+                $.post($this.attr('action'), $this.serialize(), function(data, textStatus, jqXHR) {
+                    if (data.search('errorlist') != -1 || data.search('has-error') != -1) {
+                        $this.html(data);
+                    }
+                    else {
+                        window.location.replace($this.data('success'));
+                    }
+                }).done(function () {
+                    $('input[type="text"], textarea').addClass('form-control');
+                    $('#quoteline_set .form-group').formset(formsetOptions);
+                });
+
+                return false;
+            });
+        }).done(function () {
+            $('input[type="text"], textarea').addClass('form-control');
+            $('#quoteline_set .form-group').formset(formsetOptions);
+        });
+    });
 
     console.log(app);
     console.log('Running jQuery %s', $().jquery);

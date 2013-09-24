@@ -4,13 +4,14 @@
  */
 
 
-$icon-font-path:    "/bower_components/sass-bootstrap/fonts/";
+$icon-font-path:    "../bower_components/sass-bootstrap/fonts/";
 $font-size-base:    14px;
 $blue:              #00A9BD;
 $coffee:            #C19379;
 $pink:              #e20265;
 $shadowColor:       #CBA086;
 $white:             #FFFDCC;
+$modal-content-bg:  #FAF6EB;
 
 @import 'sass-bootstrap/lib/bootstrap';
 
@@ -88,8 +89,21 @@ footer {
 
     }
     
+    .carousel-control {
+        background: transparent;
+    }
+
     .carousel-inner img {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.icon-next,
+.icon-prev {
+    color: black;
+}
+
+img {
+    @include img-responsive();
 }

@@ -1,0 +1,20 @@
+<div class="panel-group" id="hintsaccordion">
+    {% for hint in hints %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#hintsaccordion" href="#collapse-{{ hint.id }}">
+                      {{ hint.for }}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-{{ hint.id }}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        {{ hint.list|unordered_list }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

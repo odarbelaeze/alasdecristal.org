@@ -2,14 +2,13 @@
     Styles for products page.
  */
 
-.modal {
-    background: url('../images/elements/background.jpg');
-}
+// .modal-header,
+// .modal-body,
+// .modal-footer {
+//     background: url('../images/elements/background.jpg');
+// }
 
 .thumbnail {
+    background-color: transparent;
     border: none;
-
-    h3 {
-        line-height: 100%;
-    }
 }

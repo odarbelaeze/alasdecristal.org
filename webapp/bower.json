@@ -5,6 +5,7 @@
     "sass-bootstrap": "~3.0.0",
     "requirejs": "~2.1.8",
     "jquery": "~1.10.2",
+    "django-dynamic-formset": "*",
     "marked": "~0.2.9",
     "underscore": "~1.5.1"
   },

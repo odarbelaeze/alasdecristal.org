@@ -2,33 +2,54 @@
     Styles for the agenda page
  */
 
-#hintsaccordion .accordion-group {
-    .accordion-heading {
+#hintsaccordion .panel {
+
+    background-color: transparent;
+
+    .panel-heading {
         height: 55px;
+        display: table;
+        width: 100%;
+
         h4 {
-            line-height: 95%;
+            display: table-cell;
+            vertical-align: middle;
         }
-        &:nth-child(1) {
+    }
+
+    &:nth-of-type(1) {
+        .panel-heading {
             background: url('../images/ala/01.png') top right;
         }
-        &:nth-child(2) {
+    }
+    &:nth-of-type(2) {
+        .panel-heading {
             background: url('../images/ala/02.png') top right;
         }
-        &:nth-child(3) {
+    }
+    &:nth-of-type(3) {
+        .panel-heading {
             background: url('../images/ala/03.png') top right;
         }
-        &:nth-child(4) {
+    }
+    &:nth-of-type(4) {
+        .panel-heading {
             background: url('../images/ala/04.png') top right;
         }
-        &:nth-child(5) {
+    }
+    &:nth-of-type(5) {
+        .panel-heading {
             background: url('../images/ala/05.png') top right;
         }
-        &:nth-child(6) {
+    }
+    &:nth-of-type(6) {
+        .panel-heading {
             background: url('../images/ala/06.png') top right;
         }
-        &:nth-child(7) {
+    }
+    &:nth-of-type(7) {
+        .panel-heading {
             background: url('../images/ala/07.png') top right;
         }
     }
 }
-

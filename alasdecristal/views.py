@@ -50,8 +50,28 @@ class ProductsView(FooterFormMixin, TemplateView):
 class AboutView(FooterFormMixin, TemplateView):
     template_name = 'about.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(AboutView, self).get_context_data(**kwargs)
+
+        f = open(os.path.join(settings.PROJECT_ROOT, 'webapp/dist/data/team.json'))
+        teams = json.load(f)
+        f.close()
+        context['teams'] = teams
+
+        return context
+
 class AgendaView(FooterFormMixin, TemplateView):
     template_name = 'agenda.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AgendaView, self).get_context_data(**kwargs)
+
+        f = open(os.path.join(settings.PROJECT_ROOT, 'webapp/dist/data/hints.json'))
+        hints = json.load(f)
+        f.close()
+        context['hints'] = hints
+
+        return context
 
 class ContactView(FooterFormMixin, TemplateView):
     template_name = 'contact.html'

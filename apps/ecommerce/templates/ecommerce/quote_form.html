@@ -1,0 +1,79 @@
+{% csrf_token %}
+
+<div class="form-group {% if form.name.errors %} has-error {% endif %}">
+    <label for="id_name">Nombre</label>
+    <input id="id_name" maxlength="250" name="name" type="text" class="form-control" placeholder="John Snow" required>
+</div>
+
+<div class="form-group {% if form.subject.errors %} has-error {% endif %}">
+    <label for="id_subject">Asunto</label>
+    <input id="id_subject" maxlength="250" name="subject" type="text" class="form-control" placeholder="Asunto" required>
+</div>
+
+<div class="form-group {% if form.email.errors %} has-error {% endif %}">
+    <label for="id_email">Email</label>
+    <input id="id_email" maxlength="75" name="email" type="email" class="form-control" placeholder="you@mail.com"  required>
+</div>
+
+<div class="form-group {% if form.phone.errors %} has-error {% endif %}">
+    <label for="id_phone">Teléfono</label>
+    <input id="id_phone" maxlength="250" name="phone" type="text" class="form-control" placeholder="(opcional)">
+</div>
+
+<div class="form-group {% if form.city.errors %} has-error {% endif %}">
+    <label for="id_city">Ciudad</label>
+    <input id="id_city" maxlength="250" name="city" type="text" class="form-control" placeholder="(opcional)">
+</div>
+
+<fieldset class="inline_formset" id="quoteline_set">
+
+    {{ quoteline_formset.management_form }}
+
+    <div class="row form-group dynamic-form">
+        <label class="sr-only" for="id_quoteline_set-0-quote">Quote</label>
+        <input id="id_quoteline_set-0-quote" name="quoteline_set-0-quote" type="hidden">
+
+        <div class="col-xs-5">
+            <label class="sr-only" for="id_quoteline_set-0-product">Producto</label>
+            <input id="id_quoteline_set-0-product" maxlength="250" name="quoteline_set-0-product" type="text" class="form-control">
+        </div>
+        
+        <div class="col-xs-4">
+            <label class="sr-only" for="id_quoteline_set-0-quatity">Cantidad</label>
+            <input id="id_quoteline_set-0-quatity" name="quoteline_set-0-quatity" type="text" class="form-control">
+        </div>
+
+        <label class="sr-only" for="id_quoteline_set-0-id">Id</label>
+        <input id="id_quoteline_set-0-id" name="quoteline_set-0-id" type="hidden">
+    
+        <label class="sr-only" for="id_quoteline_set-0-DELETE">Eliminar</label>
+        <input id="id_quoteline_set-0-DELETE" name="quoteline_set-0-DELETE" type="checkbox">
+
+    </div>
+
+    <div class="row form-group dynamic-form">
+            
+        <label class="sr-only" for="id_quoteline_set-1-quote">Quote</label>
+        <input id="id_quoteline_set-1-quote" name="quoteline_set-1-quote" type="hidden">
+    
+        <div class="col-xs-5">
+            <label class="sr-only" for="id_quoteline_set-0-product">Producto</label>
+            <input id="id_quoteline_set-0-product" maxlength="250" name="quoteline_set-0-product" type="text" class="form-control">
+        </div>
+        
+        <div class="col-xs-4">
+            <label class="sr-only" for="id_quoteline_set-0-quatity">Cantidad</label>
+            <input id="id_quoteline_set-0-quatity" name="quoteline_set-0-quatity" type="text" class="form-control">
+        </div>
+    
+        <label class="sr-only" for="id_quoteline_set-1-id">Id</label>
+        <input id="id_quoteline_set-1-id" name="quoteline_set-1-id" type="hidden">
+    
+        <label class="sr-only" for="id_quoteline_set-1-DELETE">Eliminar</label>
+        <input id="id_quoteline_set-1-DELETE" name="quoteline_set-1-DELETE" type="checkbox">
+        
+    </div>
+
+</fieldset>
+
+<button type="submit" class="btn btn-blue">ENVIAR</button>

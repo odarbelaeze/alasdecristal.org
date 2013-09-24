@@ -1,14 +1,39 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Fundación Alas de cristal
+    Equipo de trabajo de la Fundación Alas de Cristal.
 {% endblock title %}
 
-{% block extra_head %}
-    
-{% endblock extra_head %}
-
 {% block content %}
-    About
-{% endblock content %}
+    <section id="about">
+        <p class="lead">
+            La <strong>Fundación Alas de Cristal</strong> surge en el año 2008 con la promoción, gestión y ejecución de propuestas, proyectos y productos que contribuyen a acercar a la población en temas que aporten a la construcción de una ciudad, un país y un mundo con mayor compromiso hacia la humanidad y sensibilidad con el planeta. Por eso elegimos el arte, la educación y el medio ambiente.
 
+        </p>
+        <h2>Institucional</h2>
+        <h3>Trayectoria</h3>
+        <p>Ya cumplimos 5 años de emprendimiento educativo, cultural, científico y artístico. Hemos crecido, hemos desarrollado nuevos productos y estamos en innovación permanente.</p>
+
+        <h3>Labor Social</h3>
+        <p>La Fundación Alas de Cristal contribuye al bienestar social, entre otras, dando ayudas, estímulos o becas a jóvenes talentos, o donación y dotación de material lúdico cultural para establecimientos educativos, en lo cual destinará un porcentaje de sus ingresos.</p>
+
+        <h3>Misión</h3>
+        <p>Exaltar la vida por medio del arte y ofrecer educación, buscando mantener un equilibrio entre el ser humano y el medio ambiente.</p>
+
+        <h3>Visión</h3>
+        <p>Una Humanidad en paz y un planeta para la vida.</p>
+
+        <h3>Nuestro lema</h3>
+        <p>Por la Elevación de la Vida.</p>
+    </section>
+
+    <section id="team">
+        <h2>Nuestro equipo</h2>
+        
+        {% for team in teams %}
+            {% include "snipets/team.html" %}
+        {% endfor %}
+
+    </section>
+
+{% endblock content %}

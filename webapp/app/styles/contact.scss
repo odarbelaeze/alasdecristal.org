@@ -2,9 +2,13 @@
     Styles for the contact page.
  */
 
+.form-wrapper {
+    padding: 0 10px;
+    @include make-md-column(6);
+}
+
 #contact-form,
 #quote-form {
-    @include make-md-column(6);
     border-radius: 10px;
     color: #fffdcc;
     padding: 20px 50px;
@@ -18,7 +22,7 @@
         text-align: center;
     }
 
-    button {
+    & > .form-group:last-of-type button {
         font-weight: bold;
         margin-top: 30px;
     }
@@ -35,6 +39,21 @@
 
 }
 
+#contact-form {
+    background: url('../images/elements/ala.png') bottom right no-repeat, $blue;
+}
+
+#quote-form {
+    background: url('../images/elements/ala.png') bottom right no-repeat, $pink;
+}
+
+
+.errorlist {
+    @extend .list-unstyled;
+    @extend .text-danger;
+}
+
+
 #contact-info {
     margin-top: 50px;
 
@@ -50,3 +69,22 @@
  
 }
 
+
+#thanks {
+    border-radius: 20px;
+    display: table;
+    margin: 100px auto;
+    max-width: 520px;
+    min-height: 300px;
+    padding: 30px;
+    text-align: center;
+
+    background: url('../images/elements/ala.png') bottom right no-repeat, $blue;
+
+    p {
+        color: $white;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+}
