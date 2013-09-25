@@ -1,34 +1,84 @@
-{% csrf_token %}
+{% extends "base.html" %}
 
-<div class="form-group {% if form.name.errors %} has-error {% endif %}">
-    <label for="id_name">Nombre</label>
-    <input id="id_name" maxlength="250" name="name" type="text" class="form-control" placeholder="John Snow" required>
-</div>
+{% block title %}
+    Contacto | Fundación Alas de Cristal
+{% endblock title %}
 
-<div class="form-group {% if form.subject.errors %} has-error {% endif %}">
-    <label for="id_subject">Asunto</label>
-    <input id="id_subject" maxlength="250" name="subject" type="text" class="form-control" placeholder="Asunto" required>
-</div>
+{% block description %}
+    Información de contacto de la Fundación Alas de Cristal
+{% endblock description %}
 
-<div class="form-group {% if form.email.errors %} has-error {% endif %}">
-    <label for="id_email">Email</label>
-    <input id="id_email" maxlength="75" name="email" type="email" class="form-control" placeholder="you@mail.com"  required>
-</div>
+{% block extra_head %}
+    
+{% endblock extra_head %}
 
-<div class="form-group {% if form.phone.errors %} has-error {% endif %}">
-    <label for="id_phone">Teléfono</label>
-    <input id="id_phone" maxlength="250" name="phone" type="text" class="form-control" placeholder="(opcional)">
-</div>
+{% block content %}
+    <div class="row">
+        <div class="form-wrapper">
+            <div id="contact-form">
+                <h2>CONTÁCTENOS</h2>
+                <form role="form" action="{% url 'contact-add' %}" method="POST">
 
-<div class="form-group {% if form.city.errors %} has-error {% endif %}">
-    <label for="id_city">Ciudad</label>
-    <input id="id_city" maxlength="250" name="city" type="text" class="form-control" placeholder="(opcional)">
-</div>
+                {% csrf_token %}
 
-<div class="form-group {% if form.message.errors %} has-error {% endif %}">
-    <label for="id_message">Mensaje</label>
-    <textarea cols="40" id="id_message" name="message" rows="10" class="form-control" placeholder="Mensaje" required></textarea>
-</div>
+                <div class="form-group {% if form.name.errors %} has-error {% endif %}">
+                    <label for="id_name">Nombre</label>
+                    <input id="id_name" maxlength="250" name="name" type="text" class="form-control" placeholder="John Snow" required>
+                </div>
+
+                <div class="form-group {% if form.subject.errors %} has-error {% endif %}">
+                    <label for="id_subject">Asunto</label>
+                    <input id="id_subject" maxlength="250" name="subject" type="text" class="form-control" placeholder="Asunto" required>
+                </div>
+
+                <div class="form-group {% if form.email.errors %} has-error {% endif %}">
+                    <label for="id_email">Email</label>
+                    <input id="id_email" maxlength="75" name="email" type="email" class="form-control" placeholder="you@mail.com"  required>
+                </div>
+
+                <div class="form-group {% if form.phone.errors %} has-error {% endif %}">
+                    <label for="id_phone">Teléfono</label>
+                    <input id="id_phone" maxlength="250" name="phone" type="text" class="form-control" placeholder="(opcional)">
+                </div>
+
+                <div class="form-group {% if form.city.errors %} has-error {% endif %}">
+                    <label for="id_city">Ciudad</label>
+                    <input id="id_city" maxlength="250" name="city" type="text" class="form-control" placeholder="(opcional)">
+                </div>
+
+                <div class="form-group {% if form.message.errors %} has-error {% endif %}">
+                    <label for="id_message">Mensaje</label>
+                    <textarea cols="40" id="id_message" name="message" rows="10" class="form-control" placeholder="Mensaje" required></textarea>
+                </div>
 
 
-<button type="submit" class="btn btn-pink">ENVIAR</button>
+                <button type="submit" class="btn btn-pink">ENVIAR</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <section id="contact-info">
+        <div class="row">
+            <article id="info-bogota" class="col-sm-6">
+                <h2 class="name"><span class="blue">Fundación Alas de Cristal</span> <br> <small style="font-size: 22px;" class="pink">Bogotá - Colombia</small></h2>
+                <div class="addres" style="font-size:16px; line-height: 22px;"><strong class="muted">Cr 16 # 32 – 83</strong> </div>
+                <div class="phone" style="font-size:16px; line-height: 22px;"><strong class="muted">(57)(1) 2 85 85 60</strong></div>
+                <h3><strong class="pink">Contacto</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:fundacion@alasdecristal.org">fundacion@alasdecristal.org</a>
+                <h3><strong class="pink">Dirección General</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:direccion@alasdecristal.org">direccion@alasdecristal.org</a>
+            </article>
+            <article id="info-us" class="col-sm-6">
+                <h2 class="name"><span class="blue">Fundación Alas de Cristal</span> <br> <small style="font-size: 22px;" class="pink">Tampa, FL - Estados Unidos</small></h2>
+                <div class="addres" style="font-size:16px; line-height: 22px;"><strong class="muted">6211 Savannah Breeze Ct.</strong></div>
+                <div class="phone" style="font-size:16px; line-height: 22px;"><strong class="muted">(813) 382 7416</strong> </div>
+                <h3><strong class="pink">Contacto</strong></h3>
+                <a style="font-family: yanone; font-size:18px;" href="mailto:fundacionalasdecristal@alasdecristal.org">fundacionalasdecristal@alasdecristal.org</a>
+            </article>
+        </div>
+    </section>
+{% endblock content %}
+

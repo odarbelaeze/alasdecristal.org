@@ -23,6 +23,7 @@ class NewsletterSuscriptionCreate(CreateView):
 class ContactCreate(CreateView):
     model = Contact
     form_class = ContactForm
+    template_name = 'contact.html'
     success_url = '/ecommerce/contact/thanks/'
 
     def form_valid(self, form):
@@ -34,7 +35,7 @@ class ContactCreate(CreateView):
         message += 'Ciudad: %s \n' % form.cleaned_data['city']
         message += '\nMensaje: \n%s\n' % form.cleaned_data['message']
 
-        res = send_mail(subject, message, 'contacto@alasdecristal.org', ['contacto@alasdecristal.org'])
+        res = send_mail(subject, message, 'contacto@alasdecristal.org', ['direccion@alasdecristal.org'])
 
         return super(ContactCreate, self).form_valid(form)
 

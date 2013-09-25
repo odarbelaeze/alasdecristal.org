@@ -1,29 +1,68 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Fundación Alas de cristal
+    Contacto | Fundación Alas de Cristal
 {% endblock title %}
+
+{% block description %}
+    Información de contacto de la Fundación Alas de Cristal
+{% endblock description %}
 
 {% block extra_head %}
     
 {% endblock extra_head %}
 
 {% block content %}
+    
+    <p class="lead">
+        Si lo prefieres puedes solicitar una <a href="{% url 'quote-add' %}"> cotización </a>.
+    </p>
+
     <div class="row">
         <div class="form-wrapper">
             <div id="contact-form">
                 <h2>CONTÁCTENOS</h2>
-                <form class="ajax-form" role="form" data-source="{% url 'contact-add' %}" data-success="{% url 'contact-thanks' %}" action="{% url 'contact-add' %}">
+                <form role="form" action="{% url 'contact' %}" method="POST">
+
+                {% csrf_token %}
+
+                <div class="form-group {% if form.name.errors %} has-error {% endif %}">
+                    <label for="id_name">Nombre</label>
+                    <input id="id_name" maxlength="250" name="name" type="text" class="form-control" placeholder="John Snow" required>
+                </div>
+
+                <div class="form-group {% if form.subject.errors %} has-error {% endif %}">
+                    <label for="id_subject">Asunto</label>
+                    <input id="id_subject" maxlength="250" name="subject" type="text" class="form-control" placeholder="Asunto" required>
+                </div>
+
+                <div class="form-group {% if form.email.errors %} has-error {% endif %}">
+                    <label for="id_email">Email</label>
+                    <input id="id_email" maxlength="75" name="email" type="email" class="form-control" placeholder="you@mail.com"  required>
+                </div>
+
+                <div class="form-group {% if form.phone.errors %} has-error {% endif %}">
+                    <label for="id_phone">Teléfono</label>
+                    <input id="id_phone" maxlength="250" name="phone" type="text" class="form-control" placeholder="(opcional)">
+                </div>
+
+                <div class="form-group {% if form.city.errors %} has-error {% endif %}">
+                    <label for="id_city">Ciudad</label>
+                    <input id="id_city" maxlength="250" name="city" type="text" class="form-control" placeholder="(opcional)">
+                </div>
+
+                <div class="form-group {% if form.message.errors %} has-error {% endif %}">
+                    <label for="id_message">Mensaje</label>
+                    <textarea cols="40" id="id_message" name="message" rows="10" class="form-control" placeholder="Mensaje" required></textarea>
+                </div>
+
+
+                <button type="submit" class="btn btn-pink">ENVIAR</button>
+
                 </form>
             </div>
         </div>
-        <div class="form-wrapper">
-            <div id="quote-form">
-                <h2>SOLICITE UNA COTIZACIÓN</h2>
-                <form class="ajax-form" role="form" data-source="{% url 'quote-add' %}" data-success="{% url 'contact-thanks' %}" action="{% url 'quote-add' %}">
-                </form>
-            </div>
-        </div>
+
     </div>
 
     <section id="contact-info">

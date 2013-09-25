@@ -12,7 +12,7 @@ class Team(models.Model):
 
     def __unicode__(self):
         return '%s' % self.name
-    
+
     name = models.CharField(max_length=250,
         verbose_name='Nombre')
 
@@ -47,6 +47,9 @@ class Product(models.Model):
         verbose_name='Descirpción')
     thumbnail = models.ImageField(upload_to='products/thumbnails',
         verbose_name='Icono')
+    featured = models.BooleanField(
+        verbose_name='En promoción, el que lleve, el que escoja')
+
 
 class ProductImage(models.Model):
     class Meta:
@@ -66,6 +69,7 @@ class ProductImage(models.Model):
     caption_on = models.BooleanField(
         verbose_name='Activar caption')
 
+
 class HintGroup(models.Model):
     class Meta:
         verbose_name = _('Grupo de recomendaciones')
@@ -75,6 +79,7 @@ class HintGroup(models.Model):
         return self.title
 
     title = models.CharField(max_length=250)
+
 
 class Hint(models.Model):
     class Meta:
@@ -158,9 +163,10 @@ class QuoteLine(models.Model):
 
     def __unicode__(self):
         return '%s' % self.product
-    
+
     quote = models.ForeignKey(Quote)
     product = models.CharField(max_length=250,
         verbose_name='Producto')
     quatity = models.IntegerField(
         verbose_name='Cantidad')
+

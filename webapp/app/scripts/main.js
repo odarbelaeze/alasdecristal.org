@@ -93,14 +93,6 @@ require(['app',
         }
     });
     
-    var formsetOptions = {
-        prefix: 'quoteline_set',
-        addCssClass: 'btn btn-default pull-rigth',
-        addText: '<span class= "glyphicon glyphicon-plus-sign"></span> Agregar',
-        deleteCssClass: 'btn btn-default col-xs-2',
-        deleteText: '<span class= "glyphicon glyphicon-minus-sign"></span>'
-    };
-
     $('.ajax-form').each(function () {
         var $this = $(this);
         $.get($this.data('source'), function (data) {
@@ -116,14 +108,12 @@ require(['app',
                     }
                 }).done(function () {
                     $('input[type="text"], textarea').addClass('form-control');
-                    $('#quoteline_set .form-group').formset(formsetOptions);
                 });
 
                 return false;
             });
         }).done(function () {
             $('input[type="text"], textarea').addClass('form-control');
-            $('#quoteline_set .form-group').formset(formsetOptions);
         });
     });
 

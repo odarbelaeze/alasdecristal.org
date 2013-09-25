@@ -25,11 +25,11 @@ urlpatterns = patterns('',
     url(r'^products/$', ProductsView.as_view(), name='products'),
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^agenda/$', AgendaView.as_view(), name='agenda'),
-    url(r'^contact/$', ContactView.as_view(), name='contact'),
+    url(r'^contact/$', ContactCreate.as_view(), name='contact'),
 
     # Ecommerce views
     url(r'^ecommerce/suscription/add/$', NewsletterSuscriptionCreate.as_view(), name='suscription-add'),
-    url(r'^ecommerce/contact/add/$', ContactCreate.as_view(), name='contact-add'),
+    # url(r'^ecommerce/contact/add/$', ContactCreate.as_view(), name='contact-add'),
     url(r'^ecommerce/contact/thanks/$', ContactThanks.as_view(), name='contact-thanks'),
     url(r'^ecommerce/quote/add/$', QuoteCreate.as_view(), name='quote-add'),
 
