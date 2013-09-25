@@ -1,24 +1,24 @@
-Alias /robots.txt  /root/alasdecristal.org/files/public/static/robots.txt
-Alias /favicon.ico /root/alasdecristal.org/files/public/static/favicon.ico
+Alias /robots.txt  /var/www/alasdecristal.org/files/public/static/robots.txt
+Alias /favicon.ico /var/www/alasdecristal.org/files/public/static/favicon.ico
 
-Alias /media/  /root/alasdecristal.org/files/public/media/
-Alias /static/ /root/alasdecristal.org/files/public/static/
+Alias /media/  /var/www/alasdecristal.org/files/public/media/
+Alias /static/ /var/www/alasdecristal.org/files/public/static/
 
-<Directory /root/alasdecristal.org/files/public/static>
+<Directory /var/www/alasdecristal.org/files/public/static>
 	Order deny,allow
 	Allow from all
 </Directory>
 
-<Directory /root/alasdecristal.org/files/public/media>
+<Directory /var/www/alasdecristal.org/files/public/media>
 	Order deny,allow
 	Allow from all
 </Directory>
 
 
-WSGIScriptAlias / /root/alasdecristal.org/alasdecristal/wsgi.py
-WSGIPythonPath    /root/alasdecristal.org
+WSGIScriptAlias / /var/www/alasdecristal.org/alasdecristal/wsgi.py
+WSGIPythonPath    /var/www/alasdecristal.org
 
-<Directory /root/alasdecristal.org/alasdecristal>
+<Directory /var/www/alasdecristal.org/alasdecristal>
 	<Files wsgi.py>
 		Order deny,allow
 		Allow from all
