@@ -21,6 +21,6 @@ WSGIPythonPath    /root/alasdecristal.org
 <Directory /root/alasdecristal.org/alasdecristal>
 	<Files wsgi.py>
 		Order deny,allow
-		Require all granted
+		Allow from all
 	</Files>
 </Directory>
