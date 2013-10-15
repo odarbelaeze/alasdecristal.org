@@ -41,6 +41,8 @@ ALLOWED_HOSTS = [
     'alasdecristal.org',
     '.alasdecristal.org',
     'alas.wamrc.com',
+    'localhost',
+    '192.241.235.9',
 ]
 
 # Local time zone for this installation. Choices can be found here:
