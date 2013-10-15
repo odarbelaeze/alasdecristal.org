@@ -3,3 +3,6 @@ node_modules
 .sass-cache
 app/bower_components
 *.pyc
+files/public/static/*
+files/public/media/*
+
