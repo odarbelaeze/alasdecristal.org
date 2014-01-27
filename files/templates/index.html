@@ -12,88 +12,20 @@
 
 {% block content %}
 
+    <section id="hero">
+        <p class="lead" style="text-align: center; font-face: yanone;">
+            Ante la amenaza del cambio climático, la Fundación Alas de Cristal desarrolla proyectos que difundan la belleza y riqueza de nuestra biodiversidad e invitar a su defensa y protección como el ejercicio de una nueva ciudadanía ambiental.
+            <br>
+            ¡Te invitamos a conocer nuestros productos y servicios!
+        </p>
+    </section>
+
     <section id="almanac">
-        <div class="title" id="almanac-title">
-            <h2>
-                Almanaque 
-                <br> Ambiental <small><span class="double-inline">de Biodiversidad <br> en Colombia</span></small> 
-                <br> <span class="year"><small><strong>2014</strong></small></span>
-                <br> <span class="slogan"><small>&mdash; 365 días ilustrados &mdash;</small></span>
-            </h2>
-        </div>
-        <div class="almanac-logo">
-            <div id="carousel-almanac" class="carousel slide">
-                <!-- Carousel indicators  -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-almanac" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-almanac" data-slide-to="1"></li>
-                    <li data-target="#carousel-almanac" data-slide-to="2"></li>
-                    <li data-target="#carousel-almanac" data-slide-to="3"></li>
-                </ol>
 
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="active item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/logo.png" alt="Almanaque">
-                    </div>
-                    <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner1.png" alt="Almanaque">
-                    </div>
-                    <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner2.png" alt="Almanaque">
-                    </div>
-                    <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner3.png" alt="Almanaque">
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-almanac" data-slide="prev">
-                    <span class="icon-prev"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-almanac" data-slide="next">
-                    <span class="icon-next"></span>
-                </a>
-
-            </div>
+        <div class="almanac-logo" style="text-align: center;">
+            <img style="margin: 0 auto;" src="{{ STATIC_URL }}images/almanac/logo.png" alt="Almanaque">
         </div>
 
-        <section id="almanac-description">
-            <h3>
-                Descripción
-            </h3>
-            <ul>
-                <li>Es un producto educativo, cultural, científico y artístico.</li>
-                <li>365 días ilustrados.</li>
-                <li>Ilustración del maestro César Landazábal.</li>
-                <li>Contenidos científicos avalados por el Instituto Humboldt.</li>
-                <li>Educativo, cultural, científico y artístico.</li>
-                <li>Gran impacto, alta penetración, alta recordación, bajo costo.</li>
-                <li>Su logotipo institucional en cada página.</li>
-            </ul>
-        </section>
-
-        <section class="row" id="almanac-specs">
-            <h3>Características
-            </h3>
-            <div class="col-xs-4">
-                <a href="#carousel-almanac">
-                    <img class="img-responsive" src="{{ STATIC_URL }}images/almanac/cotas.png" alt="Medidas almanaque.">
-                </a>
-            </div>
-            <div class="col-xs-8">
-                <dl class="dl-horizontal">
-                    <dt>PRODUCTO</dt> <dd>Almanaque de pared por meses</dd>
-                    <dt>FORMATO</dt> <dd>Cuarto de pliego 35 x 50 cms.</dd>
-                    <dt>IMPRESIÓN</dt> <dd>Full color, tiro y retiro</dd>
-                    <dt>PÁGINAS</dt> <dd>14 (12 meses, 1 portada, 1 contraportada)</dd>
-                    <dt>HOJAS</dt> <dd>7</dd>
-                    <dt>ACABADOS</dt> <dd>Anillado doble y perforación al centro</dd>
-                    <dt>PAPEL</dt> <dd>Propalcote caña de azúcar* 250 grs.</dd>
-                    <dt>TINTAS</dt> <dd>Papel y tintas ecológicos.</dd>
-                </dl>
-            </div>
-        </section>
     </section>
 {% endblock content %}
 
