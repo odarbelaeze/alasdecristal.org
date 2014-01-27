@@ -42,6 +42,7 @@ ALLOWED_HOSTS = [
     '.alasdecristal.org',
     'alas.wamrc.com',
     'localhost',
+    '127.0.0.1',
     '192.241.235.9',
 ]
 
