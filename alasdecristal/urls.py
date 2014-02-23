@@ -35,4 +35,7 @@ urlpatterns = patterns('',
 
     # Third party app urls
 
+    url(r'^blog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
+
 )

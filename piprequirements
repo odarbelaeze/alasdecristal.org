@@ -4,3 +4,6 @@ django-extensions
 Werkzeug
 South
 psycopg2
+django-tagging
+django-mptt
+django-blog-zinnia

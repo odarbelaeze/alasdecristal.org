@@ -110,6 +110,13 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'zinnia.context_processors.version',  # Optional
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -151,6 +158,11 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'tastypie',
+
+    #Blog
+    'tagging',
+    'mptt',
+    'zinnia',
 )
 
 # A sample logging configuration. The only tangible logging
