@@ -20,6 +20,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(PROJECT_ROOT, 'files', 'database', 'devel.sqlite3'),
+        'ATOMIC_REQUESTS': True,
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -106,6 +107,13 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'zinnia.context_processors.version',  # Optional
 )
 
 MIDDLEWARE_CLASSES = (
