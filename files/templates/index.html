@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}
     Fundación Alas de Cristal
@@ -34,16 +35,16 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="active item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/logo.png" alt="Almanaque">
+                        <img src="{% static 'images/almanac/logo.png' %}" alt="Almanaque">
                     </div>
                     <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner1.png" alt="Almanaque">
+                        <img src="{% static 'images/almanac/inner1.png' %}" alt="Almanaque">
                     </div>
                     <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner2.png" alt="Almanaque">
+                        <img src="{% static 'images/almanac/inner2.png' %}" alt="Almanaque">
                     </div>
                     <div class="item" style="text-align: center;">
-                        <img src="{{ STATIC_URL }}images/almanac/inner3.png" alt="Almanaque">
+                        <img src="{% static 'images/almanac/inner3.png' %}" alt="Almanaque">
                     </div>
                 </div>
 
@@ -78,7 +79,7 @@
             </h3>
             <div class="col-xs-4">
                 <a href="#carousel-almanac">
-                    <img class="img-responsive" src="{{ STATIC_URL }}images/almanac/cotas.png" alt="Medidas almanaque.">
+                    <img class="img-responsive" src="{% static 'images/almanac/cotas.png' %}" alt="Medidas almanaque.">
                 </a>
             </div>
             <div class="col-xs-8">

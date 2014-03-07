@@ -20,7 +20,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(PROJECT_ROOT, 'files', 'database', 'devel.sqlite3'),
-        'ATOMIC_REQUESTS': True,
+        #'ATOMIC_REQUESTS': True,
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -106,6 +106,7 @@ SECRET_KEY = 'pkm!3&cy&1x63v@oeje9s44922dq)vksp^q_77iox!(&jqv7%g'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    'app_namespace.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
@@ -162,6 +163,7 @@ INSTALLED_APPS = (
     # Blog
     'tagging',
     'mptt',
+    'zinnia_bootstrap',
     'zinnia',
 )
 

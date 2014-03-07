@@ -1,7 +1,9 @@
+{% load staticfiles %}
+
 <div class="col-sm-4">
     <div class="thumbnail">
         <a data-toggle="modal" href="#modal-{{ product.id }}">
-            <img class="img-thumbnail" src="{{ STATIC_URL }}images/products/{{ product.id }}/thumbnail.png" alt="{{ product.id }}">
+            <img class="img-thumbnail" src="{% static 'images/products/'|add:product.id|add:'/thumbnail.png' %}" alt="{{ product.id }}">
         </a>
         <div class="caption">
             <h4> {{ product.name }} </h4>
@@ -34,7 +36,7 @@
                         <div class="carousel-inner">
                             {% for img in product.images %}
                                 <div class="item">
-                                    <img src="{{ STATIC_URL }}images/products/{{ product.id }}/{{ img.src }}" alt="{{ img.title }}">
+                                    <img src="{% static 'images/products/'|add:product.id|add:'/'|add:img.src %}" alt="{{ img.title }}">
                                 </div>
                             {% endfor %}
                         </div>
@@ -48,7 +50,7 @@
                         </a>
                     </div>
 
-                    <div class="product-description marked" data-source="{{ STATIC_URL }}data/products/{{ product.id }}.md"></div>
+                    <div class="product-description marked" data-source="{% static 'data/products/'|add:product.id|add:'.md' %}"></div>
 
                 </div>
                 <div class="modal-footer">
