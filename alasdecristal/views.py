@@ -38,7 +38,6 @@ class ProductsView(FooterFormMixin, TemplateView):
         featured = json.load(f)
         f.close()
         context['featured'] = bucketize(featured, 3)
-        print context['featured']
 
         f = open(os.path.join(settings.PROJECT_ROOT, 'webapp/dist/data/products.json'))
         products = json.load(f)

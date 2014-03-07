@@ -111,7 +111,15 @@ SECRET_KEY = 'pkm!3&cy&1x63v@oeje9s44922dq)vksp^q_77iox!(&jqv7%g'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+    'app_namespace.Loader',
 #     'django.template.loaders.eggs.Loader',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'zinnia.context_processors.version',  # Optional
 )
 
 MIDDLEWARE_CLASSES = (
@@ -155,6 +163,12 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'tastypie',
+
+    # Blog
+    'tagging',
+    'mptt',
+    'zinnia_bootstrap',
+    'zinnia',
 )
 
 # A sample logging configuration. The only tangible logging

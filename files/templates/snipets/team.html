@@ -1,9 +1,11 @@
+{% load staticfiles %}
+
 <section id="{{ team.team|slugify }}">
     <h3> {{ team.team }} </h3>
     {% for member  in team.members %}
         <article class="member media">
         <div class="pull-left">
-            <img width="64px" src="{{ STATIC_URL }}images/team/{{ member.img }}" class="media-object img-rounded" alt="{{ member.name }}" />
+            <img width="64px" src="{% static 'images/team/'|add:member.img %}" class="media-object img-rounded" alt="{{ member.name }}" />
         </div>
         <div class="media-body">
             <h4>{{ member.name }}</h4>
