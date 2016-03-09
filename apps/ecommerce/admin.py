@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Contact
 from .models import Hint
 from .models import HintGroup
-from .models import NewsletterSuscription
+from .models import NewsletterSubscription
 from .models import Product
 from .models import ProductImage
 from .models import Quote
@@ -47,8 +47,8 @@ class HintGroupAdmin(admin.ModelAdmin):
     inlines = [HintInline]
 
 
-class NewsletterSuscriptionAdmin(admin.ModelAdmin):
-    model = NewsletterSuscription
+class NewsletterSubscriptionAdmin(admin.ModelAdmin):
+    model = NewsletterSubscription
 
 
 class ContactAdmin(admin.ModelAdmin):
@@ -63,6 +63,6 @@ class QuoteAdmin(admin.ModelAdmin):
 admin.site.register(Team, TeamAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(HintGroup, HintGroupAdmin)
-admin.site.register(NewsletterSuscription, NewsletterSuscriptionAdmin)
+admin.site.register(NewsletterSubscription, NewsletterSubscriptionAdmin)
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Quote, QuoteAdmin)

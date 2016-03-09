@@ -2,14 +2,14 @@ from django import forms
 from django.forms.models import inlineformset_factory
 
 from .models import Contact
-from .models import NewsletterSuscription
+from .models import NewsletterSubscription
 from .models import Quote
 from .models import QuoteLine
 
 
-class NewsletterSuscriptionForm(forms.ModelForm):
+class NewsletterSubscriptionForm(forms.ModelForm):
     class Meta:
-        model = NewsletterSuscription
+        model = NewsletterSubscription
         fields = ('name', 'email', )
 
 

@@ -4,23 +4,25 @@ from django.views.generic import CreateView
 from django.views.generic import TemplateView
 
 from .models import Contact
-from .models import NewsletterSuscription
+from .models import NewsletterSubscription
 from .models import Quote
 
 from .forms import ContactForm
-from .forms import NewsletterSuscriptionForm
+from .forms import NewsletterSubscriptionForm
 from .forms import QuoteForm
 from .forms import QuoteLineFormset
 
 
-class NewsletterSuscriptionCreate(CreateView):
-    model = NewsletterSuscription
-    form_class = NewsletterSuscriptionForm
+class NewsletterSubscriptionCreate(CreateView):
+
+    model = NewsletterSubscription
+    form_class = NewsletterSubscriptionForm
     template_name = 'ecommerce/newsletter_form.html'
     success_url = '/ecommerce/contact/thanks/'
 
 
 class ContactCreate(CreateView):
+
     model = Contact
     form_class = ContactForm
     template_name = 'contact.html'
@@ -47,6 +49,7 @@ class ContactCreate(CreateView):
 
 
 class QuoteCreate(CreateView):
+
     model = Quote
     form_class = QuoteForm
     success_url = '/ecommerce/contact/thanks/'
@@ -72,4 +75,5 @@ class QuoteCreate(CreateView):
 
 
 class ContactThanks(TemplateView):
+
     template_name = 'ecommerce/thanks.html'

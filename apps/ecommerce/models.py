@@ -92,7 +92,7 @@ class Hint(models.Model):
     text = models.TextField()
 
 
-class NewsletterSuscription(models.Model):
+class NewsletterSubscription(models.Model):
     class Meta:
         verbose_name = _('Suscripción al Newsletter')
         verbose_name_plural = _('Suscripciónes al Newsletter')
