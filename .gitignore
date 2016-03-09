@@ -8,3 +8,4 @@ files/public/media/*
 .ropeproject/
 .coverage
 *.sqlite3
+alasdecristal/settings/production.py
