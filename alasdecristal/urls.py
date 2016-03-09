@@ -33,9 +33,4 @@ urlpatterns = patterns('',
     url(r'^ecommerce/contact/thanks/$', ContactThanks.as_view(), name='contact-thanks'),
     url(r'^ecommerce/quote/add/$', QuoteCreate.as_view(), name='quote-add'),
 
-    # Third party app urls
-
-    url(r'^blog/', include('zinnia.urls')),
-    url(r'^comments/', include('django.contrib.comments.urls')),
-
 )

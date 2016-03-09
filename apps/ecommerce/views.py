@@ -1,16 +1,16 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.views.generic import CreateView
 from django.views.generic import TemplateView
 from django.core.mail import send_mail
 from django.shortcuts import redirect
 
-from ecommerce.models import NewsletterSuscription 
-from ecommerce.models import Contact
-from ecommerce.models import Quote
+from .models import NewsletterSuscription
+from .models import Contact
+from .models import Quote
 
-from ecommerce.forms import *
+from .forms import NewsletterSuscriptionForm
+from .forms import ContactForm
+from .forms import QuoteForm
+from .forms import QuoteLineFormset
 
 
 class NewsletterSuscriptionCreate(CreateView):
@@ -29,13 +29,19 @@ class ContactCreate(CreateView):
     def form_valid(self, form):
         subject = form.cleaned_data['subject']
 
-        message  = 'De: %s \n' % form.cleaned_data['name']
-        message += 'Email: %s \n' % form.cleaned_data['email']
-        message += 'Teléfono: %s \n' % form.cleaned_data['phone']
-        message += 'Ciudad: %s \n' % form.cleaned_data['city']
-        message += '\nMensaje: \n%s\n' % form.cleaned_data['message']
+        lines = [
+            'De: %s' % form.cleaned_data['name'],
+            'Email: %s' % form.cleaned_data['email'],
+            'Teléfono: %s' % form.cleaned_data['phone'],
+            'Ciudad: %s' % form.cleaned_data['city'],
+            '\nMensaje: \n%s' % form.cleaned_data['message']
+        ]
 
-        res = send_mail(subject, message, 'contacto@alasdecristal.org', ['direccion@alasdecristal.org'])
+        send_mail(
+            subject, '\n'.join(lines),
+            'contacto@alasdecristal.org',
+            ['direccion@alasdecristal.org']
+        )
 
         return super(ContactCreate, self).form_valid(form)
 

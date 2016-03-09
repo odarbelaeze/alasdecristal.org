@@ -5,4 +5,6 @@ app/bower_components
 *.pyc
 files/public/static/*
 files/public/media/*
-
+.ropeproject/
+.coverage
+*.sqlite3
