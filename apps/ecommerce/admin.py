@@ -1,15 +1,15 @@
 from django.contrib import admin
 
-from .models import Team
-from .models import TeamMember
+from .models import Contact
+from .models import Hint
+from .models import HintGroup
+from .models import NewsletterSuscription
 from .models import Product
 from .models import ProductImage
-from .models import HintGroup
-from .models import Hint
-from .models import NewsletterSuscription
-from .models import Contact
 from .models import Quote
 from .models import QuoteLine
+from .models import Team
+from .models import TeamMember
 
 
 class TeamMemberInline(admin.TabularInline):

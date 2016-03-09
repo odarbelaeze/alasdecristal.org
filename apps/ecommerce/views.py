@@ -1,14 +1,14 @@
-from django.views.generic import CreateView
-from django.views.generic import TemplateView
 from django.core.mail import send_mail
 from django.shortcuts import redirect
+from django.views.generic import CreateView
+from django.views.generic import TemplateView
 
-from .models import NewsletterSuscription
 from .models import Contact
+from .models import NewsletterSuscription
 from .models import Quote
 
-from .forms import NewsletterSuscriptionForm
 from .forms import ContactForm
+from .forms import NewsletterSuscriptionForm
 from .forms import QuoteForm
 from .forms import QuoteLineFormset
 
