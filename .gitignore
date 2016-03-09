@@ -9,3 +9,4 @@ files/public/media/*
 .coverage
 *.sqlite3
 alasdecristal/settings/production.py
+.cache/
