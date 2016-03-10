@@ -1,4 +1,13 @@
+import datetime
+import pytest
+
 from django.core.urlresolvers import reverse
+
+
+@pytest.fixture
+def year():
+    today = datetime.date.today()
+    return str(today.year)
 
 
 def test_hit_homepage(client):
@@ -7,6 +16,15 @@ def test_hit_homepage(client):
     resp = client.get(reverse('home'))
     # THEN They receive a response
     assert 200 == resp.status_code
+
+
+def test_copyright_years(client, year):
+    # GIVEN any state
+    # WHEN a user requests a page
+    resp = client.get(reverse('home'))
+    # THEN the copyright years are right
+    assert '2013' in resp.content.decode()
+    assert year in resp.content.decode()
 
 
 def test_hit_products(client):
